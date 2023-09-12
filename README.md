@@ -50,6 +50,12 @@ VITE_API_BASE_URL=http://localhost:3000/api
 
 ```
 
+2. Export Variables:
+
+```bash
+   direnv allow
+```
+
 Make sure to keep your `.env` file private and do not commit it to version control.
 
 ## Usage
