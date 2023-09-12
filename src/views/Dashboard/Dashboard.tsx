@@ -33,7 +33,7 @@ interface SummaryResponse {
 interface Transaction {
   id?: string;
   description: string;
-  amount: string | number;
+  amount: string;
   type: string;
   date?: string;
 }
@@ -42,7 +42,7 @@ const Dashboard = () => {
   //const openTransactionModal = () => {};
   const [transaction, setTransaction] = useState<Transaction>({
     description: "",
-    amount: 0,
+    amount: "0",
     type: "",
   });
   const [editMode, setEditMode] = useState<boolean>(false);

@@ -1,8 +1,8 @@
 import { Input, Select, SelectItem } from "@nextui-org/react";
 
 interface TransactionFormProps {
-  amount?: string | number;
-  description?: string | undefined;
+  amount: string;
+  description?: string;
   selected?: string;
   onTransactionFormChange?: (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>

@@ -6,7 +6,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 interface Transaction {
   id?: string;
   description: string;
-  amount: string | number;
+  amount: string;
   type: string;
   date?: string;
 }

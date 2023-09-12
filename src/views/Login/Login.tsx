@@ -5,6 +5,7 @@ import LoginForm from "../../components/LoginForm";
 import RegisterForm from "../../components/RegisterForm";
 
 import authService from "../../services/authService";
+import { AxiosError } from "axios";
 
 interface RegistrationForm {
   username: string;
@@ -14,6 +15,9 @@ interface RegistrationForm {
 interface LoginFormInterface {
   username: string;
   password: string;
+}
+interface ErrorResponse {
+  message: string;
 }
 
 const Login = () => {
@@ -66,9 +70,10 @@ const Login = () => {
       authService.saveToken(response.token);
       // Redirect
       history("/dashboard");
-    } catch ({ message }) {
-      if (typeof message === "string") {
-        setError(message); // Handle custom error messages here
+    } catch (error) {
+      const err = error as AxiosError<ErrorResponse>;
+      if (typeof err.message === "string") {
+        setError(err.message); // Handle custom error messages here
       } else {
         setError("An unknown error occurred"); // Fallback error message
       }
@@ -100,9 +105,10 @@ const Login = () => {
       authService.saveToken(response.token);
       // Redirect
       history("/dashboard");
-    } catch ({ message }) {
-      if (typeof message === "string") {
-        setError(message); // Handle custom error messages here
+    } catch (error) {
+      const err = error as AxiosError<ErrorResponse>;
+      if (typeof err.message === "string") {
+        setError(err.message); // Handle custom error messages here
       } else {
         setError("An unknown error occurred"); // Fallback error message
       }
@@ -118,6 +124,7 @@ const Login = () => {
             size="md"
             aria-label="Tabs form"
             selectedKey={selected}
+            /* @ts-expect-error  expected*/
             onSelectionChange={setSelected}
           >
             <Tab key="login" title="Login">
