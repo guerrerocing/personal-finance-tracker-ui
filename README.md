@@ -1,27 +1,63 @@
-# React + TypeScript + Vite
+# Personal Finance Tracker UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [About](#about)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## Expanding the ESLint configuration
+The Financial Tracker Frontend is a React-based web application built with Vite, TypeScript, and NextUI. It provides a user-friendly interface for managing your financial transactions, tracking income and expenses, and viewing financial summaries.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Requirements
 
-- Configure the top-level `parserOptions` property like this:
+Before you begin, ensure you have met the following requirements:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- [Node.js](https://nodejs.org/): Make sure Node.js is installed on your system.
+- [Yarn](https://yarnpkg.com/): Make sure Yarn is installed on your system.
+
+## Installation
+
+Follow these steps to set up and run your frontend project:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/guerrerocing/personal-finance-tracker-ui.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd personal-finance-tracker-ui
+   ```
+
+3. Install the project dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+## Environment Variables
+
+Create a `.env` file in the root directory of your project to set up environment variables. Add the following variable:
+
+```dotenv
+VITE_API_BASE_URL=http://localhost:3000/api
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Make sure to keep your `.env` file private and do not commit it to version control.
+
+## Usage
+
+1. Start the project:
+
+   ```bash
+   yarn dev
+   ```
+
+2. Access your browser `http://localhost:5173/login`
