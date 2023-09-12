@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route
+          index
           path="/dashboard"
           element={
             <PrivateRoute>
