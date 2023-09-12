@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, redirect } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import Login from "./views/Login";
@@ -8,6 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" loader={() => redirect("/dashboard")} />
         <Route path="/login" element={<Login />} />
         <Route
           index
