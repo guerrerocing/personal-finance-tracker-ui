@@ -12,6 +12,8 @@
 
 The Financial Tracker Frontend is a React-based web application built with Vite, TypeScript, and NextUI. It provides a user-friendly interface for managing your financial transactions, tracking income and expenses, and viewing financial summaries.
 
+![Frontend](https://res.cloudinary.com/dqasri4gt/image/upload/v1694579044/CleanShot_2023-09-12_at_22.19.01_m5smj2.gif)
+
 ## Requirements
 
 Before you begin, ensure you have met the following requirements:

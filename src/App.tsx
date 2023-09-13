@@ -13,7 +13,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" loader={() => redirectDocument("/dashboard")} />
         <Route path="/login" element={<Login />} />
         <Route
           index
